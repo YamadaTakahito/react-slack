@@ -1,0 +1,11 @@
+version: '3'
+services:
+  react-slack:
+    container_name: react-slack
+    build: .
+    command: "tail -f /dev/null"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "23000:3000"
